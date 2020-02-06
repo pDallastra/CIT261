@@ -1,0 +1,38 @@
+<%- include('./partials/header.ejs') %>
+
+<body>
+    <section class="main flex row">
+        <%- include('./partials/side.ejs')%>
+        <div class="content flex col">
+            <h1>Welcome to Part I</h1>
+            <h2>I will be covering Topic 1 through Topic 4</h2>
+            <div class="items flex row">
+                <div class="item flex col">
+                    <h2>Topic 1</h2>
+                    <p>A variable to store each input. An Associative Array to store each variable, and a Array to insert false or true.</p>
+                    <p>ForEach to push(true) <strong>IF</strong> there is any value on input, or push(false) <strong>IF</strong> there is not. And then change button with DOM.</p>
+                    <div class="form flex">
+                        <form action="/part1" method="POST">
+                            <input type="text" name="name" id="name" placeholder="Your Name" oninput="checkCompletion()">
+                            <input type="text" name="contact" id="contact" placeholder="Your Contact" oninput="checkCompletion()">
+                            <button type="submit" id="submit-button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="item flex col">
+                    <h2>Topic 3</h2>
+                    <p>JSON Parse, Stringify</p>
+                    <p>Name: <%= people.name%></p>
+                    <p>Contact: <%= people.contact%></p>
+                </div>
+                <div class="item flex col" >
+                    <h2>Topic 4</h2>
+                    <p>Using XMLHTTPRequest to Consume a JSON Web Service</p>
+                    <div class="flex col" id="topic4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
